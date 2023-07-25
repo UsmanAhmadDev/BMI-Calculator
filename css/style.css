@@ -1,0 +1,551 @@
+/********** Import Google Font - Poppins **********/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/******** Body General *********/
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #cbdbf5;
+  background-image: url(../images/back.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/********** Box Main Area Start **********/
+
+.box {
+  padding-top: 15px;
+}
+.box .content {
+  width: 30%;
+  margin: auto;
+  background-color: white;
+  border-radius: 50px;
+  height: 700px;
+  opacity: 0.9;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+.box .content .heading {
+  padding: 40px 0px 0px 0px;
+}
+.box .content .heading h3 {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+/********* Gender Area *********/
+
+.box .content .gender {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 20px 0px;
+  width: 100%;
+}
+.box .content .gender .same {
+  width: 48%;
+  cursor: pointer;
+  text-align: center;
+  border: 3px solid #f3f3f3;
+  border-radius: 15px;
+  padding: 25px 0px;
+  transition: 0.5s ease-in-out;
+}
+.box .content .gender .male.clicked{
+    border: 3px solid #ff9356;
+}
+.box .content .gender .female.clicked{
+    border: 3px solid #ff4181;
+}
+.box .content .gender .male:hover {
+  border: 3px solid #ff9356;
+}
+.box .content .gender .female:hover {
+  border: 3px solid #ff4181;
+}
+.box .content .gender .same .icon {
+  padding-bottom: 20px;
+}
+.box .content .gender .female .icon {
+  transition: 0.5s ease-in-out;
+}
+.box .content .gender .male .icon {
+  color: #ff9356;
+  transition: 0.5s ease-in-out;
+}
+.box .content .gender .male:hover .icon {
+  transform: rotate(360deg);
+}
+.box .content .gender .female:hover .icon {
+  transform: rotate(360deg);
+}
+.box .content .gender .female .icon {
+  color: #ff4181;
+}
+.box .content .gender .same .name h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/**********  Range Slider ***********/
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 3px solid #f3f3f3;
+  border-radius: 15px;
+  position: relative;
+  padding: 0px 15px 0px 0px;
+}
+.range {
+  padding: 20px 20px 20px 10px;
+  border-radius: 2mm;
+  display: flex;
+  justify-content: center;
+  background: white;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+}
+.range::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+.range .slider::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+.slider {
+  height: 85px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  display: flex;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0px 0px 0px 10px;
+  scroll-behavior: smooth;
+}
+
+/********** Thumb for Range Slider ***********/
+
+.thumb {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: -14px;
+  transform-origin: center;
+}
+.thumb::before {
+  position: absolute;
+  top: -3px;
+  left: 12px;
+  right: 0;
+  bottom: 0;
+  content: "place";
+  font-family: "Material Icons Round";
+  text-align: center;
+  line-height: 30px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/********* Ticks for Range Slider **********/
+
+.ticks {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin-top: 27px;
+}
+.tick {
+  display: block;
+  height: 30px;
+  width: 0.75mm;
+  background: rgb(219, 224, 225);
+  position: absolute;
+  bottom: 0;
+  border-radius: 0.5mm;
+}
+.tick.big {
+  height: 50px;
+}
+.tick span {
+  font-family: poppins;
+  font-size: 8px;
+  color: rgb(100, 100, 100);
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-weight: 600;
+}
+.display {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 0px 20px 0px;
+  font-family: poppins;
+  font-size: 30px;
+  color: rgb(40, 40, 40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 10px;
+  font-weight: 500;
+}
+.value {
+  font-family: poppins;
+  line-height: 16px;
+  font-size: 16px;
+  color: rgb(100, 100, 100);
+  width: 100%;
+  text-align: center;
+}
+.checkbox-area .checkbox-main .container-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 47%;
+}
+.box .content .checkbox-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*********** Hide the browser's default radio button ************/
+
+.checkbox-area .checkbox-main .container-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/********** On mouse-over, add a grey background color **********/
+
+.checkbox-area .checkbox-main .container-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/********** When the radio button is checked, add a blue background ***********/
+
+.checkbox-area .checkbox-main .container-label input:checked ~ .checkmark {
+  background-color: #2666cf;
+  transition: 0.5s ease-in-out;
+}
+.checkbox-area
+  .checkbox-main
+  .container-label
+  input:checked
+  ~ .checkmark:after {
+  display: block;
+}
+
+/********** Style the indicator (dot/circle) *************/
+
+.checkbox-area .checkbox-main .container-label .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  padding: 30px 0;
+}
+.content {
+  padding: 0 30px;
+}
+
+/*********** Input Area Start ***********/
+
+.input {
+  background: #fff;
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.input label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+.input input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #4f7df9;
+  width: 50%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Nunito", sans-serif;
+}
+.inputW {
+  background: #fff;
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border: 3px solid #f3f3f3;
+  text-align: center;
+}
+.inputW label {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 20px;
+}
+.inputW input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 50%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Nunito", sans-serif;
+}
+.inputH {
+  background: #fff;
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 3px solid #f3f3f3;
+  text-align: center;
+}
+.inputH label {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 20px;
+}
+.inputH input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 50%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Nunito", sans-serif;
+}
+.box .content .bmi {
+  text-align: center;
+}
+button.calculate {
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  background: black;
+  font-size: 15px;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  outline: none;
+  transition: 300ms;
+  border: none;
+  text-align: center;
+  position: relative;
+}
+
+/********** Result Area Start ***********/
+
+.result {
+  padding: 10px 20px;
+  text-align: center;
+}
+.result p {
+  font-weight: 600;
+  font-size: 22px;
+  color: black;
+  margin-bottom: 15px;
+}
+.result #result {
+  font-size: 36px;
+  font-weight: 900;
+  color: #2666cf;
+  background-color: white;
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 55px;
+  margin-bottom: 25px;
+}
+#comment {
+  color: #2666cf;
+  font-weight: 800;
+}
+.comment {
+  display: none;
+  border-radius: 7px;
+  padding: 5px;
+  background-color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+/******** Create a custom radio button *********/
+
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+/********* END Style for Radio **********/
+
+.containerHW {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px 0px 0px;
+}
+
+/********* The Modal (background) **********/
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding-top: 300px;
+}
+
+/********* Modal Content ***********/
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: #393c76 -1px 2px 2px 1px;
+}
+
+#modalText {
+  padding-top: 8px;
+  padding-right: 5px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(24, 23, 23);
+}
+
+.modal-wrong {
+  border: 2px solid red;
+}
+
+.modal-correct {
+  border: 2px solid green;
+}
+
+/********** The Close Button **********/
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.close:hover {
+  color: #d41111;
+}
+#height,
+#weight {
+  pointer-events: none;
+}
+
+.height_class,
+.weight_class {
+  pointer-events: auto !important;
+}
+.box .bmi-chart img {
+  width: 100%;
+}
+.box .bmi-chart {
+  display: none;
+}
+
+/************ Button bmi hover  ************/
+
+.calculate:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: "";
+  box-sizing: content-box;
+  box-shadow: 0 0 0 3px #fff;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 300ms;
+}
+.calculate:hover {
+  background-color: #2666cf;
+  color: white;
+}
+.calculate:hover:after {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+
+
